@@ -1,0 +1,50 @@
+{
+  "name": "rh-manager",
+  "version": "2.0.0",
+  "description": "Système de Gestion RH Complet - Version 2.0 avec Backend et API",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "nodemon server/index.js",
+    "test": "jest --coverage",
+    "build": "echo 'Frontend build completed'",
+    "migrate": "node server/database/migrate.js",
+    "seed": "node server/database/seed.js"
+  },
+  "keywords": [
+    "hr",
+    "management",
+    "rh",
+    "gestion",
+    "employees",
+    "payroll",
+    "recruitment"
+  ],
+  "author": "Naciro2010",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "mongoose": "^8.0.3",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.0.2",
+    "express-validator": "^7.0.1",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^6.9.7",
+    "helmet": "^7.1.0",
+    "morgan": "^1.10.0",
+    "compression": "^1.7.4",
+    "express-rate-limit": "^7.1.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2",
+    "jest": "^29.7.0",
+    "supertest": "^6.3.3",
+    "eslint": "^8.56.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}

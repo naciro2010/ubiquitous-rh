@@ -1,6 +1,6 @@
 # RH Manager - Système de Gestion RH Complet
 
-![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)
+![Version](https://img.shields.io/badge/version-2.0.0-blue.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 
 ## 🎯 Description
@@ -95,9 +95,17 @@ Visitez la démo: [https://naciro2010.github.io/ubiquitous-rh/](https://naciro20
 
 ### Prérequis
 
-Aucun prérequis particulier. L'application fonctionne directement dans le navigateur.
+**Pour la version frontend seule:**
+- Navigateur web moderne
+
+**Pour la version 2.0 avec backend:**
+- Node.js (>= 18.0.0)
+- MongoDB (local ou Atlas)
+- npm (>= 9.0.0)
 
 ### Installation Locale
+
+#### Option 1: Frontend seul (Version démo)
 
 1. Clonez le repository:
 ```bash
@@ -118,11 +126,52 @@ npx serve
 
 3. Accédez à `http://localhost:8000`
 
+#### Option 2: Version 2.0 avec Backend (Production)
+
+1. Clonez le repository:
+```bash
+git clone https://github.com/naciro2010/ubiquitous-rh.git
+cd ubiquitous-rh
+```
+
+2. Installez les dépendances:
+```bash
+npm install
+```
+
+3. Configurez les variables d'environnement:
+```bash
+cp .env.example .env
+# Éditez .env avec vos configurations
+```
+
+4. Démarrez MongoDB (si local):
+```bash
+mongod
+```
+
+5. Lancez le serveur:
+```bash
+# Mode développement (avec nodemon)
+npm run dev
+
+# Mode production
+npm start
+```
+
+6. Accédez à l'application:
+- Frontend: `http://localhost:5000`
+- API: `http://localhost:5000/api`
+- Health check: `http://localhost:5000/api/health`
+
 ## 📁 Structure du Projet
 
 ```
 ubiquitous-rh/
 ├── index.html              # Page principale
+├── package.json            # Dependencies Node.js
+├── .env.example            # Variables d'environnement exemple
+├── .gitignore              # Fichiers ignorés par Git
 ├── css/
 │   ├── main.css           # Styles principaux
 │   └── components.css     # Styles des composants
@@ -140,9 +189,32 @@ ubiquitous-rh/
 │       ├── performance.js # Module performance
 │       ├── documents.js   # Module documents
 │       └── settings.js    # Module paramètres
-├── assets/
-│   ├── images/
-│   └── icons/
+├── server/                # Backend Node.js/Express (Version 2.0)
+│   ├── index.js           # Point d'entrée du serveur
+│   ├── config/
+│   │   └── database.js    # Configuration MongoDB
+│   ├── models/
+│   │   ├── User.js        # Modèle utilisateur
+│   │   ├── Employee.js    # Modèle employé
+│   │   ├── Leave.js       # Modèle congés
+│   │   └── Attendance.js  # Modèle présences
+│   ├── controllers/
+│   │   ├── authController.js
+│   │   ├── employeeController.js
+│   │   ├── leaveController.js
+│   │   └── attendanceController.js
+│   ├── routes/
+│   │   ├── auth.js
+│   │   ├── employees.js
+│   │   ├── leaves.js
+│   │   └── attendance.js
+│   ├── middleware/
+│   │   ├── auth.js        # Middleware JWT
+│   │   └── errorHandler.js
+│   └── utils/
+├── .github/
+│   └── workflows/
+│       └── deploy.yml     # GitHub Actions déploiement
 └── README.md
 ```
 
@@ -152,9 +224,11 @@ ubiquitous-rh/
 - Chaque module est indépendant et réutilisable
 - Séparation claire des responsabilités
 - Code maintenable et extensible
+- **Nouveau:** Architecture MVC côté serveur
 
 ### Gestion des Données
-- Stockage local avec LocalStorage
+- **Version 1.0:** Stockage local avec LocalStorage
+- **Version 2.0:** Base de données MongoDB
 - Export/Import JSON pour sauvegarde
 - Export CSV pour rapports
 - Données de démo préchargées
@@ -166,10 +240,109 @@ ubiquitous-rh/
 - Formulaires avec validation
 
 ### Sécurité
-- Authentification utilisateur
+- Authentification utilisateur avec JWT
 - Système de rôles et permissions (RBAC)
 - Sanitization des données
 - Protection XSS
+- **Nouveau:** Helmet.js pour sécurité HTTP
+- **Nouveau:** Rate limiting
+- **Nouveau:** Hachage bcrypt pour mots de passe
+
+## 🔌 API Documentation (Version 2.0)
+
+### Authentification
+
+**POST** `/api/auth/register`
+```json
+{
+  "name": "John Doe",
+  "email": "john@example.com",
+  "password": "password123",
+  "role": "employee"
+}
+```
+
+**POST** `/api/auth/login`
+```json
+{
+  "email": "john@example.com",
+  "password": "password123"
+}
+```
+Response: `{ "success": true, "token": "jwt-token", "user": {...} }`
+
+**GET** `/api/auth/me` (Protected)
+Headers: `Authorization: Bearer {token}`
+
+### Employés
+
+**GET** `/api/employees` - Liste tous les employés (Protected)
+
+**GET** `/api/employees/:id` - Détails d'un employé (Protected)
+
+**POST** `/api/employees` - Créer un employé (Admin/Manager)
+```json
+{
+  "firstName": "Jean",
+  "lastName": "Dupont",
+  "email": "jean.dupont@company.com",
+  "department": "IT",
+  "position": "Développeur",
+  "hireDate": "2024-01-15",
+  "salary": { "base": 8000, "currency": "MAD" }
+}
+```
+
+**PUT** `/api/employees/:id` - Modifier un employé (Admin/Manager)
+
+**DELETE** `/api/employees/:id` - Supprimer un employé (Admin)
+
+### Congés
+
+**GET** `/api/leaves` - Liste tous les congés (Protected)
+
+**POST** `/api/leaves` - Créer une demande de congé
+```json
+{
+  "employee": "employee_id",
+  "leaveType": "Congé payé",
+  "startDate": "2024-07-01",
+  "endDate": "2024-07-10",
+  "reason": "Vacances d'été"
+}
+```
+
+**PUT** `/api/leaves/:id/approve` - Approuver un congé (Manager/Admin)
+
+**PUT** `/api/leaves/:id/reject` - Refuser un congé (Manager/Admin)
+
+### Présences
+
+**GET** `/api/attendance` - Liste des présences (Protected)
+
+**POST** `/api/attendance/checkin` - Pointer l'arrivée
+```json
+{
+  "employeeId": "employee_id"
+}
+```
+
+**PUT** `/api/attendance/checkout` - Pointer la sortie
+```json
+{
+  "attendanceId": "attendance_id"
+}
+```
+
+### Codes de Statut HTTP
+
+- `200` - Succès
+- `201` - Créé avec succès
+- `400` - Requête invalide
+- `401` - Non authentifié
+- `403` - Non autorisé
+- `404` - Ressource non trouvée
+- `500` - Erreur serveur
 
 ## 📊 Données de Démonstration
 
@@ -227,14 +400,22 @@ const MonModule = {
 
 ## 📈 Roadmap
 
-### Version 2.0 (À venir)
-- [ ] Backend avec Node.js/Express
-- [ ] Base de données (MongoDB/PostgreSQL)
-- [ ] Authentification JWT
-- [ ] API RESTful
+### Version 2.0 (Implémentée ✅)
+- [x] Backend avec Node.js/Express
+- [x] Base de données MongoDB
+- [x] Authentification JWT
+- [x] API RESTful
+- [x] Modèles de données (Employee, Leave, Attendance, User)
+- [x] Contrôleurs et routes CRUD
+- [x] Middleware de sécurité (Helmet, CORS, Rate Limiting)
+- [x] Gestion des erreurs centralisée
+- [x] Configuration environnement (.env)
 - [ ] Upload réel de fichiers
 - [ ] Génération PDF des bulletins
 - [ ] Notifications par email
+- [ ] Tests unitaires et d'intégration
+
+### Version 2.1 (En cours)
 - [ ] Application mobile (React Native)
 - [ ] Mode hors ligne (PWA)
 - [ ] Intégration badgeuse
