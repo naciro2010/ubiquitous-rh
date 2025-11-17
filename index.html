@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RH Manager - Système de Gestion RH Moderne</title>
+    <meta name="description" content="Solution complète de gestion des ressources humaines pour les entreprises modernes">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <span class="logo">🏢</span>
+                <span class="brand-name">RH Manager</span>
+            </div>
+            <div class="nav-menu">
+                <a href="#features">Fonctionnalités</a>
+                <a href="#demo">Démo</a>
+                <a href="#pricing">Tarifs</a>
+                <a href="#contact">Contact</a>
+                <button class="btn-primary" onclick="app.showLogin()">Connexion</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Gérez vos Ressources Humaines avec Simplicité</h1>
+                <p class="hero-subtitle">Solution complète de gestion RH adaptée aux entreprises marocaines - Gestion des employés, congés, présences, paie et recrutement</p>
+                <div class="hero-buttons">
+                    <button class="btn-hero-primary" onclick="app.showDemo()">Essayer la Démo</button>
+                    <button class="btn-hero-secondary" onclick="app.showLogin()">Se Connecter</button>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">Entreprises</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">10K+</div>
+                        <div class="stat-label">Employés Gérés</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">99%</div>
+                        <div class="stat-label">Satisfaction</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Fonctionnalités Complètes</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">👥</div>
+                    <h3>Gestion Employés</h3>
+                    <p>Base de données complète avec champs personnalisables, organigramme, et documents</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌴</div>
+                    <h3>Congés & Absences</h3>
+                    <p>Workflow de demande/approbation, calendrier partagé, soldes automatiques</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⏰</div>
+                    <h3>Présences & Temps</h3>
+                    <p>Pointage digital, gestion des heures supplémentaires, intégration badgeuse</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <h3>Paie & Avantages</h3>
+                    <p>Calcul automatique selon le droit marocain, bulletins de paie, charges sociales</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Recrutement</h3>
+                    <p>ATS complet, CVthèque, workflow de recrutement, entretiens</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Analytics & Reporting</h3>
+                    <p>Tableaux de bord personnalisables, KPIs RH, exports Excel/PDF</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔐</div>
+                    <h3>Sécurité & RBAC</h3>
+                    <p>Contrôle d'accès basé sur les rôles, audit trail, conformité RGPD</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌍</div>
+                    <h3>Multi-langue</h3>
+                    <p>Interface en Français, Arabe et Anglais avec RTL support</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Container (Hidden by default) -->
+    <div id="app-container" class="app-container hidden">
+        <!-- Login Modal -->
+        <div id="login-modal" class="modal hidden">
+            <div class="modal-content">
+                <span class="close" onclick="app.hideLogin()">&times;</span>
+                <h2>Connexion</h2>
+                <form id="login-form" onsubmit="app.login(event)">
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" id="login-email" placeholder="email@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Mot de passe</label>
+                        <input type="password" id="login-password" placeholder="••••••••" required>
+                    </div>
+                    <button type="submit" class="btn-primary btn-block">Se Connecter</button>
+                </form>
+                <div class="demo-info">
+                    <p><strong>Compte démo:</strong></p>
+                    <p>Email: admin@demo.com</p>
+                    <p>Mot de passe: demo123</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main App -->
+        <div id="main-app" class="main-app hidden">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <div class="sidebar-header">
+                    <span class="logo">🏢</span>
+                    <span class="brand-name">RH Manager</span>
+                </div>
+                <nav class="sidebar-nav">
+                    <a href="#" class="nav-item active" data-module="dashboard">
+                        <span class="nav-icon">📊</span>
+                        <span class="nav-text">Tableau de Bord</span>
+                    </a>
+                    <a href="#" class="nav-item" data-module="employees">
+                        <span class="nav-icon">👥</span>
+                        <span class="nav-text">Employés</span>
+                    </a>
+                    <a href="#" class="nav-item" data-module="leaves">
+                        <span class="nav-icon">🌴</span>
+                        <span class="nav-text">Congés</span>
+                    </a>
+                    <a href="#" class="nav-item" data-module="attendance">
+                        <span class="nav-icon">⏰</span>
+                        <span class="nav-text">Présences</span>
+                    </a>
+                    <a href="#" class="nav-item" data-module="payroll">
+                        <span class="nav-icon">💰</span>
+                        <span class="nav-text">Paie</span>
+                    </a>
+                    <a href="#" class="nav-item" data-module="recruitment">
+                        <span class="nav-icon">🎯</span>
+                        <span class="nav-text">Recrutement</span>
+                    </a>
+                    <a href="#" class="nav-item" data-module="performance">
+                        <span class="nav-icon">⭐</span>
+                        <span class="nav-text">Performance</span>
+                    </a>
+                    <a href="#" class="nav-item" data-module="documents">
+                        <span class="nav-icon">📄</span>
+                        <span class="nav-text">Documents</span>
+                    </a>
+                    <a href="#" class="nav-item" data-module="settings">
+                        <span class="nav-icon">⚙️</span>
+                        <span class="nav-text">Paramètres</span>
+                    </a>
+                </nav>
+                <div class="sidebar-footer">
+                    <button class="btn-logout" onclick="app.logout()">
+                        <span>🚪</span> Déconnexion
+                    </button>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <main class="main-content">
+                <header class="app-header">
+                    <div class="header-left">
+                        <h1 id="page-title">Tableau de Bord</h1>
+                    </div>
+                    <div class="header-right">
+                        <div class="user-info">
+                            <span class="user-name" id="user-name">Admin User</span>
+                            <span class="user-role" id="user-role">Administrateur</span>
+                        </div>
+                    </div>
+                </header>
+
+                <div id="module-content" class="module-content">
+                    <!-- Content will be loaded dynamically -->
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>RH Manager</h3>
+                    <p>Solution complète de gestion des ressources humaines</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Produit</h4>
+                    <a href="#features">Fonctionnalités</a>
+                    <a href="#pricing">Tarifs</a>
+                    <a href="#demo">Démo</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <a href="#docs">Documentation</a>
+                    <a href="#contact">Contact</a>
+                    <a href="#faq">FAQ</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Légal</h4>
+                    <a href="#privacy">Confidentialité</a>
+                    <a href="#terms">CGU</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 RH Manager. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/utils.js"></script>
+    <script src="js/data-manager.js"></script>
+    <script src="js/modules/dashboard.js"></script>
+    <script src="js/modules/employees.js"></script>
+    <script src="js/modules/leaves.js"></script>
+    <script src="js/modules/attendance.js"></script>
+    <script src="js/modules/payroll.js"></script>
+    <script src="js/modules/recruitment.js"></script>
+    <script src="js/modules/performance.js"></script>
+    <script src="js/modules/documents.js"></script>
+    <script src="js/modules/settings.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
