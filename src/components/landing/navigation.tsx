@@ -13,38 +13,38 @@ export function Navigation() {
   const { dir } = useRTL()
 
   return (
-    <nav className="sticky top-0 z-50 w-full border-b glass-light" dir={dir}>
-      <div className="container mx-auto flex h-16 items-center justify-between px-4">
+    <nav className="sticky top-0 z-50 w-full border-b border-border/50 bg-background/95 backdrop-blur-sm" dir={dir}>
+      <div className="container mx-auto flex h-16 items-center justify-between px-6">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2 font-semibold">
-          <Building2 className="h-6 w-6 text-primary" />
-          <span className="text-lg">{t('common.app_name')}</span>
+        <Link href="/" className="flex items-center gap-2 font-semibold text-foreground hover:opacity-80 transition-opacity">
+          <Building2 className="h-5 w-5 text-primary" />
+          <span className="text-base">{t('common.app_name')}</span>
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden items-center gap-6 md:flex">
+        <div className="hidden items-center gap-8 md:flex">
           <Link
             href="#features"
-            className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+            className="text-sm text-muted-foreground transition-colors hover:text-foreground"
           >
             {t('landing.features_title')}
           </Link>
           <Link
             href="#pricing"
-            className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+            className="text-sm text-muted-foreground transition-colors hover:text-foreground"
           >
             {t('landing.pricing_title')}
           </Link>
           <Link
             href="#faq"
-            className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+            className="text-sm text-muted-foreground transition-colors hover:text-foreground"
           >
             {t('landing.faq_title')}
           </Link>
         </div>
 
         {/* Actions */}
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-3">
           <LanguageSwitcher />
           <ThemeToggle />
           <Button variant="ghost" size="sm" asChild className="hidden md:inline-flex">
