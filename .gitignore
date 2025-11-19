@@ -38,6 +38,11 @@ temp/
 dist/
 build/
 
+# Next.js
+.next/
+out/
+next-env.d.ts
+
 # Coverage
 coverage/
 .nyc_output/
