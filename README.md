@@ -1,467 +1,261 @@
-# RH Manager - Système de Gestion RH Complet
+# RH Manager - Système de Gestion RH Moderne
 
 ![Version](https://img.shields.io/badge/version-2.0.0-blue.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
+![Next.js](https://img.shields.io/badge/Next.js-15-black.svg)
+![React](https://img.shields.io/badge/React-18-blue.svg)
 
-## 🎯 Description
+Application complète de gestion des ressources humaines construite avec **Next.js 15**, **React 18**, **TypeScript**, et **TailwindCSS**.
 
-RH Manager est une application web complète de gestion des ressources humaines, spécialement conçue pour les entreprises marocaines. Cette solution moderne offre tous les outils nécessaires pour gérer efficacement vos employés, congés, présences, paie et recrutement.
+## ✨ Fonctionnalités
 
-## ✨ Fonctionnalités Principales
+- 🌍 **Multilingue** - Support Français, Arabe (RTL), Anglais
+- 🎨 **Design Moderne** - Interface inspirée d'Anthropic avec mode clair/sombre
+- 📱 **Responsive** - Optimisé pour desktop, tablette et mobile
+- ⚡ **Performance** - Static export optimisé pour GitHub Pages
+- 🔐 **Sécurisé** - Backend Express avec JWT et RBAC
+- 📊 **Modules RH Complets** :
+  - 👥 Gestion des employés
+  - 🌴 Congés et absences
+  - ⏰ Pointage et présences
+  - 💰 Paie et avantages
+  - 🎯 Recrutement (ATS)
+  - ⭐ Évaluations de performance
+  - 📄 Gestion documentaire
+  - ⚙️ Paramètres et configuration
 
-### 📊 Tableau de Bord
-- Vue d'ensemble des statistiques RH
-- Indicateurs clés de performance (KPIs)
-- Graphiques et visualisations
-- Activités récentes
-
-### 👥 Gestion des Employés
-- Fiche employé complète avec champs personnalisables
-- Import/Export Excel
-- Recherche et filtres avancés
-- Gestion des documents personnels
-- Organigramme de l'entreprise
-
-### 🌴 Gestion des Congés
-- Workflow de demande/approbation
-- Différents types de congés (payés, maladie, sans solde, etc.)
-- Calendrier des congés
-- Suivi des soldes de congés
-- Notifications automatiques
-
-### ⏰ Gestion des Présences
-- Pointage quotidien
-- Suivi des retards et absences
-- Gestion des heures supplémentaires
-- Rapports d'assiduité
-- Statistiques hebdomadaires/mensuelles
-
-### 💰 Gestion de la Paie
-- Calcul automatique des salaires
-- Cotisations sociales (CNSS) conformes au Maroc
-- Calcul de l'IR (Impôt sur le Revenu)
-- Génération de bulletins de paie
-- Export pour comptabilité
-
-### 🎯 Recrutement (ATS)
-- Gestion des offres d'emploi
-- Suivi des candidatures
-- CVthèque
-- Workflow de recrutement
-- Tableau de bord recrutement
-
-### ⭐ Évaluation de Performance
-- Grilles d'évaluation personnalisables
-- Objectifs et suivi
-- Historique des évaluations
-- Classement des performeurs
-- Plans de développement
-
-### 📄 Gestion des Documents
-- Stockage centralisé
-- Catégorisation par type
-- Accès sécurisé
-- Recherche et filtres
-
-### ⚙️ Paramètres & Configuration
-- Informations de l'entreprise
-- Configuration des congés
-- Horaires de travail
-- Paramètres de paie
-- Import/Export des données
-
-## 🚀 Démo en Ligne
-
-Visitez la démo: [https://naciro2010.github.io/ubiquitous-rh/](https://naciro2010.github.io/ubiquitous-rh/)
-
-### Compte de Démonstration
-
-**Administrateur:**
-- Email: `admin@demo.com`
-- Mot de passe: `demo123`
-
-**Manager RH:**
-- Email: `manager@demo.com`
-- Mot de passe: `demo123`
-
-## 💻 Technologies Utilisées
-
-- **Frontend:** HTML5, CSS3, JavaScript (Vanilla)
-- **Stockage:** LocalStorage (pour la démo)
-- **Design:** CSS moderne avec variables CSS
-- **Architecture:** Modulaire et orientée composants
-
-## 🛠️ Installation
+## 🚀 Démarrage Rapide
 
 ### Prérequis
 
-**Pour la version frontend seule:**
-- Navigateur web moderne
+- Node.js 18+
+- npm 9+
 
-**Pour la version 2.0 avec backend:**
-- Node.js (>= 18.0.0)
-- MongoDB (local ou Atlas)
-- npm (>= 9.0.0)
+### Installation
 
-### Installation Locale
-
-#### Option 1: Frontend seul (Version démo)
-
-1. Clonez le repository:
 ```bash
+# Cloner le repository
 git clone https://github.com/naciro2010/ubiquitous-rh.git
 cd ubiquitous-rh
-```
 
-2. Ouvrez `index.html` dans votre navigateur
-
-Ou utilisez un serveur local:
-```bash
-# Avec Python 3
-python -m http.server 8000
-
-# Avec Node.js
-npx serve
-```
-
-3. Accédez à `http://localhost:8000`
-
-#### Option 2: Version 2.0 avec Backend (Production)
-
-1. Clonez le repository:
-```bash
-git clone https://github.com/naciro2010/ubiquitous-rh.git
-cd ubiquitous-rh
-```
-
-2. Installez les dépendances:
-```bash
+# Installer les dépendances
 npm install
-```
 
-3. Configurez les variables d'environnement:
-```bash
-cp .env.example .env
-# Éditez .env avec vos configurations
-```
-
-4. Démarrez MongoDB (si local):
-```bash
-mongod
-```
-
-5. Lancez le serveur:
-```bash
-# Mode développement (avec nodemon)
+# Lancer en développement
 npm run dev
-
-# Mode production
-npm start
 ```
 
-6. Accédez à l'application:
-- Frontend: `http://localhost:5000`
-- API: `http://localhost:5000/api`
-- Health check: `http://localhost:5000/api/health`
+Ouvrir [http://localhost:3000](http://localhost:3000) dans votre navigateur.
 
-## 📁 Structure du Projet
+## 📦 Scripts Disponibles
+
+### Frontend Next.js
+
+```bash
+npm run dev          # Développement local (port 3000)
+npm run build        # Build production (génère ./out/)
+npm start            # Serveur production Next.js
+npm run lint         # Vérification ESLint
+```
+
+### Backend Express (Optionnel)
+
+```bash
+npm run server       # Lancer le serveur API
+npm run server:dev   # Serveur API avec hot-reload
+npm run migrate      # Exécuter les migrations DB
+npm run seed         # Peupler la base de données
+```
+
+### Tests
+
+```bash
+npm test            # Exécuter les tests avec coverage
+```
+
+## 🏗️ Structure du Projet
 
 ```
 ubiquitous-rh/
-├── index.html              # Page principale
-├── package.json            # Dependencies Node.js
-├── .env.example            # Variables d'environnement exemple
-├── .gitignore              # Fichiers ignorés par Git
-├── css/
-│   ├── main.css           # Styles principaux
-│   └── components.css     # Styles des composants
-├── js/
-│   ├── app.js             # Application principale
-│   ├── utils.js           # Fonctions utilitaires
-│   ├── data-manager.js    # Gestion des données
-│   └── modules/
-│       ├── dashboard.js   # Module tableau de bord
-│       ├── employees.js   # Module employés
-│       ├── leaves.js      # Module congés
-│       ├── attendance.js  # Module présences
-│       ├── payroll.js     # Module paie
-│       ├── recruitment.js # Module recrutement
-│       ├── performance.js # Module performance
-│       ├── documents.js   # Module documents
-│       └── settings.js    # Module paramètres
-├── server/                # Backend Node.js/Express (Version 2.0)
-│   ├── index.js           # Point d'entrée du serveur
-│   ├── config/
-│   │   └── database.js    # Configuration MongoDB
-│   ├── models/
-│   │   ├── User.js        # Modèle utilisateur
-│   │   ├── Employee.js    # Modèle employé
-│   │   ├── Leave.js       # Modèle congés
-│   │   └── Attendance.js  # Modèle présences
-│   ├── controllers/
-│   │   ├── authController.js
-│   │   ├── employeeController.js
-│   │   ├── leaveController.js
-│   │   └── attendanceController.js
-│   ├── routes/
-│   │   ├── auth.js
-│   │   ├── employees.js
-│   │   ├── leaves.js
-│   │   └── attendance.js
-│   ├── middleware/
-│   │   ├── auth.js        # Middleware JWT
-│   │   └── errorHandler.js
-│   └── utils/
-├── .github/
-│   └── workflows/
-│       └── deploy.yml     # GitHub Actions déploiement
-└── README.md
+├── src/
+│   ├── app/                    # Next.js App Router
+│   │   ├── [locale]/          # Routes internationalisées
+│   │   │   ├── (app)/         # Pages application
+│   │   │   └── page.tsx       # Landing page
+│   │   └── layout.tsx         # Layout racine
+│   ├── components/            # Composants React
+│   │   ├── ui/               # Composants UI (shadcn/ui)
+│   │   ├── landing/          # Composants landing page
+│   │   ├── app/              # Composants application
+│   │   └── patterns/         # Patterns réutilisables
+│   ├── config/               # Configuration
+│   ├── lib/                  # Utilitaires
+│   └── styles/               # Styles globaux
+├── messages/                  # Fichiers de traduction (i18n)
+├── public/                    # Assets statiques
+├── server/                    # Backend Express (optionnel)
+└── .github/workflows/        # GitHub Actions CI/CD
 ```
 
-## 🎨 Fonctionnalités Techniques
+## 🌐 Déploiement sur GitHub Pages
 
-### Architecture Modulaire
-- Chaque module est indépendant et réutilisable
-- Séparation claire des responsabilités
-- Code maintenable et extensible
-- **Nouveau:** Architecture MVC côté serveur
+Le projet est **automatiquement déployé** sur GitHub Pages à chaque push.
 
-### Gestion des Données
-- **Version 1.0:** Stockage local avec LocalStorage
-- **Version 2.0:** Base de données MongoDB
-- Export/Import JSON pour sauvegarde
-- Export CSV pour rapports
-- Données de démo préchargées
+### Configuration
 
-### Interface Utilisateur
-- Design moderne et responsive
-- Navigation intuitive
-- Notifications en temps réel
-- Formulaires avec validation
+1. **Activer GitHub Pages** dans les paramètres du repository :
+   - Settings → Pages
+   - Source: **GitHub Actions**
 
-### Sécurité
-- Authentification utilisateur avec JWT
-- Système de rôles et permissions (RBAC)
-- Sanitization des données
-- Protection XSS
-- **Nouveau:** Helmet.js pour sécurité HTTP
-- **Nouveau:** Rate limiting
-- **Nouveau:** Hachage bcrypt pour mots de passe
+2. **Push sur main ou une branche claude/** :
+   ```bash
+   git push origin main
+   ```
 
-## 🔌 API Documentation (Version 2.0)
+3. **GitHub Actions** va automatiquement :
+   - ✅ Installer les dépendances
+   - ✅ Builder l'application Next.js
+   - ✅ Déployer sur GitHub Pages
 
-### Authentification
+4. Votre site sera accessible sur :
+   ```
+   https://naciro2010.github.io/ubiquitous-rh/
+   ```
 
-**POST** `/api/auth/register`
-```json
-{
-  "name": "John Doe",
-  "email": "john@example.com",
-  "password": "password123",
-  "role": "employee"
-}
+### Workflow CI/CD
+
+Le workflow `.github/workflows/deploy.yml` :
+- ✅ Build automatique sur push
+- ✅ Export statique Next.js (`output: 'export'`)
+- ✅ Déploiement sur GitHub Pages
+- ✅ Support des branches `claude/**` pour tests
+
+## 🎨 Design System
+
+L'application utilise un design system moderne inspiré d'Anthropic :
+
+- **Couleurs** : Palette chaleureuse avec tons neutres (#FDFCFB, #0080FF)
+- **Typographie** : Système de tailles responsive avec letter-spacing optimisé
+- **Ombres** : Subtiles et en couches (shadow-1, shadow-2, shadow-3)
+- **Animations** : Fluides avec timing naturel (180ms, cubic-bezier)
+- **Effets** : Glassmorphism (backdrop-blur)
+- **Composants** : shadcn/ui + Radix UI
+- **Icons** : Lucide React
+
+Voir `DESIGN_SYSTEM_2025.md` pour plus de détails.
+
+## 🌍 Internationalisation
+
+Support complet pour 3 langues :
+
+- 🇫🇷 **Français** (par défaut)
+- 🇸🇦 **Arabe** (avec support RTL complet)
+- 🇬🇧 **Anglais**
+
+Les traductions sont dans `/messages/`:
+- `fr.json` - Français
+- `ar.json` - Arabe
+- `en.json` - Anglais
+
+Configuration dans `src/config/i18n.ts` avec **next-intl**.
+
+## 🔧 Configuration
+
+### Variables d'Environnement (Backend Optionnel)
+
+Copier `.env.example` vers `.env` :
+
+```bash
+cp .env.example .env
 ```
 
-**POST** `/api/auth/login`
-```json
-{
-  "email": "john@example.com",
-  "password": "password123"
-}
-```
-Response: `{ "success": true, "token": "jwt-token", "user": {...} }`
-
-**GET** `/api/auth/me` (Protected)
-Headers: `Authorization: Bearer {token}`
-
-### Employés
-
-**GET** `/api/employees` - Liste tous les employés (Protected)
-
-**GET** `/api/employees/:id` - Détails d'un employé (Protected)
-
-**POST** `/api/employees` - Créer un employé (Admin/Manager)
-```json
-{
-  "firstName": "Jean",
-  "lastName": "Dupont",
-  "email": "jean.dupont@company.com",
-  "department": "IT",
-  "position": "Développeur",
-  "hireDate": "2024-01-15",
-  "salary": { "base": 8000, "currency": "MAD" }
-}
+Variables disponibles :
+```env
+NODE_ENV=development
+PORT=3001
+MONGODB_URI=mongodb://localhost:27017/rh-manager
+JWT_SECRET=your-secret-key
 ```
 
-**PUT** `/api/employees/:id` - Modifier un employé (Admin/Manager)
+### Personnalisation
 
-**DELETE** `/api/employees/:id` - Supprimer un employé (Admin)
+- **Thème** : Modifier `src/styles/globals.css`
+- **Couleurs** : Variables CSS dans `:root` (--ui-*)
+- **Composants** : shadcn/ui dans `src/components/ui/`
+- **Traductions** : Fichiers JSON dans `/messages/`
 
-### Congés
+## 📚 Technologies Utilisées
 
-**GET** `/api/leaves` - Liste tous les congés (Protected)
+### Frontend
+- **Next.js 15** - Framework React avec App Router
+- **React 18** - Bibliothèque UI
+- **TypeScript 5.7** - Typage statique
+- **TailwindCSS 3.4** - Styles utilitaires
+- **next-intl** - Internationalisation i18n
+- **Radix UI** - Composants accessibles (WCAG 2.2 AA)
+- **Lucide React** - Icons modernes
+- **class-variance-authority** - Variants de composants
+- **tailwind-merge** - Merge de classes TailwindCSS
 
-**POST** `/api/leaves` - Créer une demande de congé
-```json
-{
-  "employee": "employee_id",
-  "leaveType": "Congé payé",
-  "startDate": "2024-07-01",
-  "endDate": "2024-07-10",
-  "reason": "Vacances d'été"
-}
-```
-
-**PUT** `/api/leaves/:id/approve` - Approuver un congé (Manager/Admin)
-
-**PUT** `/api/leaves/:id/reject` - Refuser un congé (Manager/Admin)
-
-### Présences
-
-**GET** `/api/attendance` - Liste des présences (Protected)
-
-**POST** `/api/attendance/checkin` - Pointer l'arrivée
-```json
-{
-  "employeeId": "employee_id"
-}
-```
-
-**PUT** `/api/attendance/checkout` - Pointer la sortie
-```json
-{
-  "attendanceId": "attendance_id"
-}
-```
-
-### Codes de Statut HTTP
-
-- `200` - Succès
-- `201` - Créé avec succès
-- `400` - Requête invalide
-- `401` - Non authentifié
-- `403` - Non autorisé
-- `404` - Ressource non trouvée
-- `500` - Erreur serveur
-
-## 📊 Données de Démonstration
-
-L'application inclut des données de démo pour faciliter la découverte:
-- 5 employés fictifs
-- Demandes de congés
-- Historique de présences (30 jours)
-- Offres d'emploi
-- Évaluations de performance
-- Documents types
-
-## 🌍 Conformité Marocaine
-
-L'application est adaptée aux spécificités du Maroc:
-- Calcul CNSS selon les taux marocains (4.48%)
-- Calcul IR (Impôt sur le Revenu) progressif
-- Types de congés conformes au Code du Travail
-- Support du format de date DD/MM/YYYY
-- Devise MAD (Dirham)
-
-## 🔧 Personnalisation
-
-### Ajouter un Nouveau Module
-
-1. Créez un fichier dans `js/modules/`:
-```javascript
-const MonModule = {
-    render() {
-        return `<div>Mon contenu</div>`;
-    },
-    init() {
-        console.log('Module initialisé');
-    }
-};
-```
-
-2. Ajoutez le module dans `index.html`:
-```html
-<script src="js/modules/mon-module.js"></script>
-```
-
-3. Ajoutez la navigation dans la sidebar
-
-### Modifier les Couleurs
-
-Éditez les variables CSS dans `css/main.css`:
-```css
-:root {
-    --primary: #2563eb;
-    --secondary: #10b981;
-    --danger: #ef4444;
-    /* ... */
-}
-```
-
-## 📈 Roadmap
-
-### Version 2.0 (Implémentée ✅)
-- [x] Backend avec Node.js/Express
-- [x] Base de données MongoDB
-- [x] Authentification JWT
-- [x] API RESTful
-- [x] Modèles de données (Employee, Leave, Attendance, User)
-- [x] Contrôleurs et routes CRUD
-- [x] Middleware de sécurité (Helmet, CORS, Rate Limiting)
-- [x] Gestion des erreurs centralisée
-- [x] Configuration environnement (.env)
-- [ ] Upload réel de fichiers
-- [ ] Génération PDF des bulletins
-- [ ] Notifications par email
-- [ ] Tests unitaires et d'intégration
-
-### Version 2.1 (En cours)
-- [ ] Application mobile (React Native)
-- [ ] Mode hors ligne (PWA)
-- [ ] Intégration badgeuse
-- [ ] Rapports avancés
-- [ ] Dashboard analytique avancé
-
-### Version 3.0 (Futur)
-- [ ] Intelligence Artificielle pour recrutement
-- [ ] Chatbot RH
-- [ ] Prédiction de turnover
-- [ ] Formation en ligne intégrée
-- [ ] Réseau social d'entreprise
+### Backend (Optionnel)
+- **Express 4** - Serveur Node.js
+- **MongoDB** - Base de données NoSQL
+- **Mongoose** - ODM MongoDB
+- **JWT** - Authentification sécurisée
+- **bcryptjs** - Hashing de mots de passe
+- **Helmet** - Sécurité HTTP headers
 
 ## 🤝 Contribution
 
-Les contributions sont les bienvenues!
+Les contributions sont bienvenues ! Voir les guidelines :
 
 1. Fork le projet
-2. Créez une branche (`git checkout -b feature/AmazingFeature`)
-3. Commit vos changements (`git commit -m 'Add AmazingFeature'`)
+2. Créer une branche (`git checkout -b feature/AmazingFeature`)
+3. Commit les changements (`git commit -m 'Add AmazingFeature'`)
 4. Push vers la branche (`git push origin feature/AmazingFeature`)
-5. Ouvrez une Pull Request
+5. Ouvrir une Pull Request
 
-## 📝 License
+## 📄 License
 
-Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
+MIT License - voir le fichier LICENSE pour plus de détails.
 
 ## 👨‍💻 Auteur
 
 **Naciro2010**
 - GitHub: [@naciro2010](https://github.com/naciro2010)
 
-## 🙏 Remerciements
+## 🔗 Liens Utiles
 
-- Design inspiré par les meilleures pratiques UX/UI modernes
-- Adapté aux besoins spécifiques des entreprises marocaines
-- Développé avec passion pour simplifier la gestion RH
+- [Documentation Next.js](https://nextjs.org/docs)
+- [Documentation TailwindCSS](https://tailwindcss.com/docs)
+- [shadcn/ui Components](https://ui.shadcn.com)
+- [Radix UI](https://www.radix-ui.com)
+- [next-intl](https://next-intl-docs.vercel.app)
 
-## 📞 Support
+## ⚡ Performance & Optimisations
 
-Pour toute question ou problème:
-- Ouvrez une [issue](https://github.com/naciro2010/ubiquitous-rh/issues)
-- Consultez la [documentation](https://github.com/naciro2010/ubiquitous-rh/wiki)
+- ✅ Export statique optimisé (`output: 'export'`)
+- ✅ Images non optimisées pour compatibilité GitHub Pages
+- ✅ Code splitting automatique par route
+- ✅ Tree shaking activé
+- ✅ Console logs supprimés en production
+- ✅ Optimisation des imports (lucide-react, @radix-ui)
+- ✅ TypeScript strict mode
+- ✅ React strict mode
+
+## 🐛 Support
+
+Pour les bugs et questions :
+- Ouvrir une [issue](https://github.com/naciro2010/ubiquitous-rh/issues)
+- Consulter les [discussions](https://github.com/naciro2010/ubiquitous-rh/discussions)
+
+## 📝 Documentation Complémentaire
+
+- `DESIGN_SYSTEM_2025.md` - Guide complet du design system
+- `INSTALLATION.md` - Instructions d'installation détaillées
+- `DEPLOYMENT.md` - Guide de déploiement
+- `REFONTE.md` - Notes de refonte UI/UX
 
 ---
 
-**Note:** Cette application est un MVP (Minimum Viable Product) conçu pour démonstration. Pour une utilisation en production, il est recommandé d'implémenter un backend sécurisé et une base de données.
-
-Développé avec ❤️ pour simplifier la gestion RH au Maroc
+Fait avec ❤️ par Naciro2010 | Powered by Next.js 15
