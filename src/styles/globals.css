@@ -11,41 +11,41 @@
   /* ===== CSS VARIABLES - DESIGN TOKENS ===== */
 
   :root {
-    /* Layout & Spacing */
-    --ui-radius-sm: 8px;
-    --ui-radius: 12px;
-    --ui-radius-md: 12px;
-    --ui-radius-lg: 16px;
+    /* Layout & Spacing - Anthropic-inspired */
+    --ui-radius-sm: 6px;
+    --ui-radius: 8px;
+    --ui-radius-md: 10px;
+    --ui-radius-lg: 12px;
 
-    /* Shadows - Light Theme */
-    --ui-shadow-1: 0 1px 2px rgba(0, 0, 0, 0.06);
-    --ui-shadow-2: 0 8px 24px rgba(0, 0, 0, 0.08);
-    --ui-shadow-3: 0 16px 48px rgba(0, 0, 0, 0.12);
-    --ui-shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.06);
+    /* Shadows - Softer, more subtle */
+    --ui-shadow-1: 0 1px 3px rgba(0, 0, 0, 0.04);
+    --ui-shadow-2: 0 4px 12px rgba(0, 0, 0, 0.05);
+    --ui-shadow-3: 0 8px 24px rgba(0, 0, 0, 0.06);
+    --ui-shadow-glass: 0 4px 16px rgba(0, 0, 0, 0.04);
 
-    /* Light Theme Colors */
-    --ui-bg: 0 0% 100%;                    /* #FFFFFF */
-    --ui-elev-1: 0 0% 98%;                 /* #FAFAFA */
-    --ui-elev-2: 0 0% 96%;                 /* #F5F5F5 */
-    --ui-border: 0 0% 89%;                 /* #E3E3E3 */
-    --ui-input: 0 0% 89%;                  /* #E3E3E3 */
-    --ui-ring: 221 83% 68%;                /* Focus ring - accent */
+    /* Light Theme Colors - Anthropic-inspired warm neutrals */
+    --ui-bg: 30 20% 99%;                   /* #FDFCFB - Soft warm white */
+    --ui-elev-1: 30 25% 97%;               /* #F9F7F4 - Warm off-white */
+    --ui-elev-2: 30 20% 95%;               /* #F5F2EE - Light warm gray */
+    --ui-border: 30 10% 88%;               /* #E5E2DD - Soft warm border */
+    --ui-input: 30 15% 92%;                /* #EFEBE6 - Warm input bg */
+    --ui-ring: 210 100% 50%;               /* Focus ring - clean blue */
 
-    --ui-text: 0 0% 9%;                    /* #171717 */
-    --ui-text-muted: 0 0% 45%;             /* #737373 */
+    --ui-text: 0 0% 13%;                   /* #212121 - Rich black */
+    --ui-text-muted: 0 0% 50%;             /* #808080 - Medium gray */
 
-    /* Accent Colors - Azure to Violet gradient */
-    --ui-accent: 221 83% 68%;              /* #6E8FFF */
+    /* Accent Colors - Clean, modern palette */
+    --ui-accent: 210 100% 50%;             /* #0080FF - Clean blue */
     --ui-accent-fg: 0 0% 100%;             /* White text on accent */
-    --ui-accent-2: 265 75% 71%;            /* #A277FF */
+    --ui-accent-2: 220 90% 56%;            /* #2563EB - Deep blue */
     --ui-accent-2-fg: 0 0% 100%;
 
-    /* Semantic Colors */
-    --ui-success: 142 76% 36%;             /* #16A34A */
+    /* Semantic Colors - Softer, more professional */
+    --ui-success: 142 70% 45%;             /* #22C55E - Modern green */
     --ui-success-fg: 0 0% 100%;
-    --ui-warning: 38 92% 50%;              /* #F59E0B */
+    --ui-warning: 38 90% 55%;              /* #F59E0B - Warm orange */
     --ui-warning-fg: 0 0% 100%;
-    --ui-danger: 0 84% 60%;                /* #EF4444 */
+    --ui-danger: 0 72% 51%;                /* #DC2626 - Clean red */
     --ui-danger-fg: 0 0% 100%;
   }
 
@@ -110,42 +110,51 @@
     @apply font-arabic;
   }
 
-  /* ===== TYPOGRAPHY ===== */
+  /* ===== TYPOGRAPHY - Anthropic-inspired ===== */
 
   h1, h2, h3, h4, h5, h6 {
     @apply font-semibold tracking-tight;
+    letter-spacing: -0.02em;
   }
 
   h1 {
     @apply text-4xl md:text-5xl lg:text-6xl;
+    line-height: 1.1;
   }
 
   h2 {
     @apply text-3xl md:text-4xl;
+    line-height: 1.2;
   }
 
   h3 {
     @apply text-2xl md:text-3xl;
+    line-height: 1.3;
   }
 
   h4 {
     @apply text-xl md:text-2xl;
+    line-height: 1.4;
   }
 
   h5 {
     @apply text-lg md:text-xl;
+    line-height: 1.5;
   }
 
   h6 {
     @apply text-base md:text-lg;
+    line-height: 1.5;
   }
 
   p {
-    @apply leading-normal;
+    @apply leading-relaxed;
+    line-height: 1.7;
   }
 
   small {
     @apply text-sm text-muted-foreground;
+    line-height: 1.5;
   }
 
   /* ===== FOCUS STATES (WCAG 2.2 AA) ===== */
@@ -212,11 +221,11 @@
 /* ===== UTILITY CLASSES ===== */
 
 @layer utilities {
-  /* Text gradients */
+  /* Text gradients - Subtle and clean */
   .text-gradient {
     @apply bg-clip-text text-transparent;
     background-image: linear-gradient(
-      135deg,
+      120deg,
       hsl(var(--ui-accent)),
       hsl(var(--ui-accent-2))
     );
