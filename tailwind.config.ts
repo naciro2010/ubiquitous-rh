@@ -140,6 +140,30 @@ const config: Config = {
           '0%': { backgroundPosition: '-1000px 0' },
           '100%': { backgroundPosition: '1000px 0' },
         },
+        'gradient': {
+          '0%, 100%': { backgroundPosition: '0% 50%' },
+          '50%': { backgroundPosition: '100% 50%' },
+        },
+        'glow': {
+          '0%, 100%': { opacity: '1', transform: 'scale(1)' },
+          '50%': { opacity: '0.8', transform: 'scale(1.05)' },
+        },
+        'float': {
+          '0%, 100%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(-4px)' },
+        },
+        'pulse-soft': {
+          '0%, 100%': { opacity: '1' },
+          '50%': { opacity: '0.9' },
+        },
+        'scale-in': {
+          '0%': { transform: 'scale(0.95)', opacity: '0' },
+          '100%': { transform: 'scale(1)', opacity: '1' },
+        },
+        'bounce-subtle': {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-2px)' },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
@@ -148,6 +172,12 @@ const config: Config = {
         'slide-in-bottom': 'slide-in-from-bottom 0.18s cubic-bezier(0.2, 0.8, 0.2, 1)',
         'fade-in': 'fade-in 0.15s ease-out',
         'shimmer': 'shimmer 2s infinite linear',
+        'gradient': 'gradient 4s ease infinite',
+        'glow': 'glow 2s ease-in-out infinite',
+        'float': 'float 3s ease-in-out infinite',
+        'pulse-soft': 'pulse-soft 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'scale-in': 'scale-in 0.2s ease-out',
+        'bounce-subtle': 'bounce-subtle 1s ease-in-out infinite',
       },
       backdropBlur: {
         'xs': '2px',
