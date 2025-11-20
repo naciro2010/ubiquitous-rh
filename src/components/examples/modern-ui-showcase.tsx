@@ -30,7 +30,7 @@ export function ModernUIShowcase() {
 
         {/* Header */}
         <div className="text-center space-y-4 animate-fade-in">
-          <Badge variant="gradient" size="lg" className="animate-scale-in">
+          <Badge variant="default" size="lg" className="animate-scale-in">
             <Icon variant="primary" animation="pulse">
               <Sparkles className="h-4 w-4" />
             </Icon>
@@ -56,7 +56,7 @@ export function ModernUIShowcase() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-responsive">
 
             {/* Default Gradient */}
-            <Card variant="glass">
+            <Card variant="outline">
               <CardHeader>
                 <CardTitle className="text-base">Default Gradient</CardTitle>
                 <CardDescription>Gradient moderne avec glow</CardDescription>
@@ -73,41 +73,41 @@ export function ModernUIShowcase() {
             </Card>
 
             {/* Glass Variant */}
-            <Card variant="glass">
+            <Card variant="outline">
               <CardHeader>
                 <CardTitle className="text-base">Glassmorphism</CardTitle>
                 <CardDescription>Effet de verre moderne</CardDescription>
               </CardHeader>
               <CardContent className="space-y-3">
-                <Button variant="glass" className="w-full">Glass Button</Button>
-                <Button variant="glass" size="lg" className="w-full" icon={<Zap className="h-5 w-5" />}>
+                <Button variant="outline" className="w-full">Glass Button</Button>
+                <Button variant="outline" size="lg" className="w-full" icon={<Zap className="h-5 w-5" />}>
                   Glass + Icon
                 </Button>
-                <Button variant="glass" size="sm" className="w-full">
+                <Button variant="outline" size="sm" className="w-full">
                   Small Glass
                 </Button>
               </CardContent>
             </Card>
 
             {/* Gradient Animated */}
-            <Card variant="glass">
+            <Card variant="outline">
               <CardHeader>
                 <CardTitle className="text-base">Gradient Animé</CardTitle>
                 <CardDescription>Gradient vivid en mouvement</CardDescription>
               </CardHeader>
               <CardContent className="space-y-3">
-                <Button variant="gradient" className="w-full">Gradient</Button>
-                <Button variant="gradient" size="lg" className="w-full" icon={<Star className="h-5 w-5" />}>
+                <Button variant="default" className="w-full">Gradient</Button>
+                <Button variant="default" size="lg" className="w-full" icon={<Star className="h-5 w-5" />}>
                   Animated
                 </Button>
-                <Button variant="gradient" size="sm" className="w-full">
+                <Button variant="default" size="sm" className="w-full">
                   Small
                 </Button>
               </CardContent>
             </Card>
 
             {/* Actions */}
-            <Card variant="glass">
+            <Card variant="outline">
               <CardHeader>
                 <CardTitle className="text-base">Actions</CardTitle>
                 <CardDescription>Boutons d&apos;action colorés</CardDescription>
@@ -126,7 +126,7 @@ export function ModernUIShowcase() {
             </Card>
 
             {/* Outline & Ghost */}
-            <Card variant="glass">
+            <Card variant="outline">
               <CardHeader>
                 <CardTitle className="text-base">Outline & Ghost</CardTitle>
                 <CardDescription>Variants subtils</CardDescription>
@@ -139,17 +139,17 @@ export function ModernUIShowcase() {
             </Card>
 
             {/* Neumorphism */}
-            <Card variant="glass">
+            <Card variant="outline">
               <CardHeader>
                 <CardTitle className="text-base">Neumorphism</CardTitle>
                 <CardDescription>Design avec profondeur</CardDescription>
               </CardHeader>
               <CardContent className="space-y-3">
-                <Button variant="neo" className="w-full">Neo Button</Button>
-                <Button variant="neo" size="lg" className="w-full">
+                <Button variant="secondary" className="w-full">Neo Button</Button>
+                <Button variant="secondary" size="lg" className="w-full">
                   Large Neo
                 </Button>
-                <Button variant="neo" size="icon" className="mx-auto">
+                <Button variant="secondary" size="icon" className="mx-auto">
                   <Heart className="h-5 w-5" />
                 </Button>
               </CardContent>
@@ -164,10 +164,10 @@ export function ModernUIShowcase() {
               <Button size="icon" variant="default">
                 <Send className="h-5 w-5" />
               </Button>
-              <Button size="icon" variant="glass">
+              <Button size="icon" variant="outline">
                 <Download className="h-5 w-5" />
               </Button>
-              <Button size="icon" variant="gradient">
+              <Button size="icon" variant="default">
                 <Star className="h-5 w-5" />
               </Button>
               <Button size="icon" variant="success">
@@ -192,9 +192,9 @@ export function ModernUIShowcase() {
 
           <div className="flex flex-wrap justify-center gap-3">
             <Badge variant="default">Default</Badge>
-            <Badge variant="gradient" size="lg">Gradient</Badge>
-            <Badge variant="glass">Glass</Badge>
-            <Badge variant="neon">Neon</Badge>
+            <Badge variant="default" size="lg">Gradient</Badge>
+            <Badge variant="outline">Glass</Badge>
+            <Badge variant="secondary">Neon</Badge>
             <Badge variant="success">Success</Badge>
             <Badge variant="warning">Warning</Badge>
             <Badge variant="destructive">Error</Badge>
@@ -242,7 +242,7 @@ export function ModernUIShowcase() {
               <p className="text-xs text-muted-foreground">Scale</p>
             </div>
             <div className="text-center space-y-2">
-              <Icon variant="gradient" animation="rotate" size="xl">
+              <Icon variant="default" animation="rotate" size="xl">
                 <Sparkles />
               </Icon>
               <p className="text-xs text-muted-foreground">Rotate</p>
@@ -273,7 +273,7 @@ export function ModernUIShowcase() {
               </CardFooter>
             </Card>
 
-            <Card variant="glass">
+            <Card variant="outline">
               <CardHeader>
                 <CardTitle>Glass Card</CardTitle>
                 <CardDescription>Effet glassmorphism</CardDescription>
@@ -284,11 +284,11 @@ export function ModernUIShowcase() {
                 </p>
               </CardContent>
               <CardFooter>
-                <Button variant="glass" size="sm" className="w-full">Action</Button>
+                <Button variant="outline" size="sm" className="w-full">Action</Button>
               </CardFooter>
             </Card>
 
-            <Card variant="gradient">
+            <Card variant="default">
               <CardHeader>
                 <CardTitle>Gradient Card</CardTitle>
                 <CardDescription>Border gradient</CardDescription>
@@ -299,7 +299,7 @@ export function ModernUIShowcase() {
                 </p>
               </CardContent>
               <CardFooter>
-                <Button variant="gradient" size="sm" className="w-full">Action</Button>
+                <Button variant="default" size="sm" className="w-full">Action</Button>
               </CardFooter>
             </Card>
           </div>
@@ -312,7 +312,7 @@ export function ModernUIShowcase() {
             <p className="text-muted-foreground">Adapté à toutes les tailles d&apos;écran</p>
           </div>
 
-          <Card variant="glass" className="padding-responsive">
+          <Card variant="outline" className="padding-responsive">
             <CardContent className="space-y-6 pt-6">
               <div className="space-y-2">
                 <h3 className="text-responsive-lg font-semibold">Breakpoints</h3>
@@ -333,10 +333,10 @@ export function ModernUIShowcase() {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-                <Button variant="glass" className="w-full sm:w-auto">
+                <Button variant="outline" className="w-full sm:w-auto">
                   Mobile: Full Width
                 </Button>
-                <Button variant="gradient" className="w-full sm:w-auto">
+                <Button variant="default" className="w-full sm:w-auto">
                   Desktop: Auto Width
                 </Button>
               </div>

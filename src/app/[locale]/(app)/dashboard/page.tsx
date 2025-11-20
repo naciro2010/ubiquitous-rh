@@ -65,7 +65,7 @@ export default function DashboardPage() {
         <div>
           <h1 className="text-3xl font-bold tracking-tight">Tableau de Bord</h1>
           <p className="text-muted-foreground">
-            Vue d'ensemble de votre activité RH
+            Vue d&apos;ensemble de votre activité RH
           </p>
         </div>
         <Button>Actions rapides</Button>

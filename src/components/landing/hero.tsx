@@ -42,11 +42,10 @@ export function Hero() {
               size="lg"
               asChild
               className="w-full sm:w-auto min-w-[180px]"
-              icon={<ArrowRight className="h-5 w-5" />}
-              iconPosition="right"
             >
-              <Link href="/auth/demo">
+              <Link href="/auth/demo" className="inline-flex items-center gap-2">
                 {t('landing.cta_demo')}
+                <ArrowRight className="h-5 w-5" />
               </Link>
             </Button>
             <Button
