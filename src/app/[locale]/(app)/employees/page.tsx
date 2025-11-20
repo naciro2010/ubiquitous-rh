@@ -1,6 +1,5 @@
 'use client'
 
-import { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { DataGrid, SortableHeader } from '@/components/advanced/data-grid'
@@ -108,7 +107,7 @@ const columns: ColumnDef<Employee>[] = [
   },
   {
     id: 'actions',
-    cell: ({ row }) => {
+    cell: () => {
       return (
         <DropdownMenu>
           <DropdownMenuTrigger asChild>

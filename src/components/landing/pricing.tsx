@@ -129,7 +129,7 @@ export function Pricing() {
 
         {/* Note */}
         <p className="mt-12 text-center text-sm text-muted-foreground">
-          Tous les plans incluent une période d'essai gratuite de 14 jours.
+          Tous les plans incluent une période d&apos;essai gratuite de 14 jours.
           <br />
           Conformité CNSS et Code du Travail marocain garantie.
         </p>

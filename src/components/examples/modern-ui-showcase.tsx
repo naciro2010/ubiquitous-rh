@@ -110,7 +110,7 @@ export function ModernUIShowcase() {
             <Card variant="glass">
               <CardHeader>
                 <CardTitle className="text-base">Actions</CardTitle>
-                <CardDescription>Boutons d'action colorés</CardDescription>
+                <CardDescription>Boutons d&apos;action colorés</CardDescription>
               </CardHeader>
               <CardContent className="space-y-3">
                 <Button variant="success" className="w-full" icon={<Download className="h-4 w-4" />}>
@@ -309,7 +309,7 @@ export function ModernUIShowcase() {
         <section className="space-y-8">
           <div className="text-center">
             <h2 className="text-responsive-xl font-bold mb-2">Responsive Design</h2>
-            <p className="text-muted-foreground">Adapté à toutes les tailles d'écran</p>
+            <p className="text-muted-foreground">Adapté à toutes les tailles d&apos;écran</p>
           </div>
 
           <Card variant="glass" className="padding-responsive">
