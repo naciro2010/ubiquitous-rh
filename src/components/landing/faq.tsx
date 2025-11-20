@@ -36,7 +36,7 @@ const faqs = [
       'Oui, RH Manager offre un système de champs personnalisés et un Form Builder pour adapter l\'outil à vos processus RH spécifiques.',
   },
   {
-    question: \'L\'IA Copilot fonctionne en arabe ?',
+    question: 'L\'IA Copilot fonctionne en arabe ?',
     answer:
       'Oui, notre assistant IA est multilingue (français, arabe, anglais) et comprend le contexte RH marocain.',
   },
