@@ -5,15 +5,6 @@ import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Plus, Mail, Phone } from 'lucide-react'
 
-type Candidate = {
-  id: string
-  name: string
-  position: string
-  email: string
-  phone: string
-  source: string
-}
-
 const kanbanColumns = [
   {
     id: 'new',

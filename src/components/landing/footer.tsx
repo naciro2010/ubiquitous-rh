@@ -91,7 +91,7 @@ export function Footer() {
               </li>
               <li>
                 <Link href="/terms" className="hover:text-foreground">
-                  Conditions d'utilisation
+                  Conditions d&apos;utilisation
                 </Link>
               </li>
               <li>

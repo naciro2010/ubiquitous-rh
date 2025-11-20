@@ -217,7 +217,16 @@ export function DataGrid<TData, TValue>({
 }
 
 // Helper for sortable column header
-export function SortableHeader({ column, children }: any) {
+export function SortableHeader({
+  column,
+  children,
+}: {
+  column: {
+    toggleSorting: (ascending: boolean) => void
+    getIsSorted: () => 'asc' | 'desc' | false
+  }
+  children: React.ReactNode
+}) {
   return (
     <Button
       variant="ghost"

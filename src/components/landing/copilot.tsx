@@ -37,7 +37,7 @@ export function Copilot() {
                 <div>
                   <h4 className="mb-1 font-semibold">Recherche sémantique</h4>
                   <p className="text-sm text-muted-foreground">
-                    Trouvez instantanément n'importe quelle information RH avec
+                    Trouvez instantanément n&apos;importe quelle information RH avec
                     le langage naturel
                   </p>
                 </div>
@@ -52,7 +52,7 @@ export function Copilot() {
                     Suggestions intelligentes
                   </h4>
                   <p className="text-sm text-muted-foreground">
-                    L'IA vous propose des actions contextuelles et anticipe vos
+                    L&apos;IA vous propose des actions contextuelles et anticipe vos
                     besoins
                   </p>
                 </div>
@@ -66,7 +66,7 @@ export function Copilot() {
                   <h4 className="mb-1 font-semibold">Automatisation</h4>
                   <p className="text-sm text-muted-foreground">
                     Automatisez les tâches répétitives et concentrez-vous sur
-                    l'essentiel
+                    l&apos;essentiel
                   </p>
                 </div>
               </div>

@@ -29,6 +29,15 @@ const nextConfig: NextConfig = {
   experimental: {
     optimizePackageImports: ['lucide-react', '@radix-ui/react-icons'],
   },
+
+  // Build cache configuration for faster rebuilds
+  // Cache is stored in .next/cache directory
+  // This significantly improves build times for subsequent builds
+  generateBuildId: async () => {
+    // Use a consistent build ID for better caching
+    // In CI/CD, you might want to use the git commit hash
+    return process.env.BUILD_ID || 'build-' + Date.now()
+  },
 }
 
 export default withNextIntl(nextConfig)

@@ -1,4 +1,3 @@
-import { useTranslations } from 'next-intl'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Users, Calendar, Clock, TrendingUp, AlertCircle, CheckCircle } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -19,7 +18,7 @@ const stats = [
     trend: 'neutral',
   },
   {
-    title: 'Présences Aujourd\'hui',
+    title: 'Présences Aujourd&apos;hui',
     value: '98.5%',
     change: '+2.3%',
     icon: Clock,

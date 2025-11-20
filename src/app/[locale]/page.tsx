@@ -1,4 +1,3 @@
-import { useTranslations } from 'next-intl'
 import { Hero } from '@/components/landing/hero'
 import { Features } from '@/components/landing/features'
 import { Copilot } from '@/components/landing/copilot'

@@ -18,7 +18,7 @@ export function CTA() {
             Prêt à transformer votre gestion RH ?
           </h2>
           <p className="mb-10 text-lg text-muted-foreground sm:text-xl">
-            Rejoignez les centaines d'entreprises marocaines qui ont simplifié
+            Rejoignez les centaines d&apos;entreprises marocaines qui ont simplifié
             leur RH avec notre solution.
           </p>
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">

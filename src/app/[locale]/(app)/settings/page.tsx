@@ -29,7 +29,7 @@ export default function SettingsPage() {
         <TabsContent value="general" className="space-y-4">
           <Card>
             <CardHeader>
-              <CardTitle>Informations de l'entreprise</CardTitle>
+              <CardTitle>Informations de l&apos;entreprise</CardTitle>
               <CardDescription>
                 Gérez les informations de votre entreprise
               </CardDescription>
@@ -37,7 +37,7 @@ export default function SettingsPage() {
             <CardContent className="space-y-4">
               <div className="grid gap-4 md:grid-cols-2">
                 <div className="space-y-2">
-                  <Label htmlFor="company-name">Nom de l'entreprise</Label>
+                  <Label htmlFor="company-name">Nom de l&apos;entreprise</Label>
                   <Input id="company-name" placeholder="Votre entreprise" />
                 </div>
                 <div className="space-y-2">

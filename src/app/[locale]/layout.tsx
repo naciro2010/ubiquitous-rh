@@ -5,6 +5,8 @@ export function generateStaticParams() {
   return locales.map((locale) => ({ locale }))
 }
 
+type Locale = (typeof locales)[number]
+
 export default function LocaleLayout({
   children,
   params: { locale },
@@ -13,7 +15,7 @@ export default function LocaleLayout({
   params: { locale: string }
 }) {
   // Validate that the incoming `locale` parameter is valid
-  if (!locales.includes(locale as any)) {
+  if (!locales.includes(locale as Locale)) {
     notFound()
   }
 
