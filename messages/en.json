@@ -32,7 +32,10 @@
     "performance": "Performance",
     "documents": "Documents",
     "settings": "Settings",
-    "logout": "Logout"
+    "logout": "Logout",
+    "new_employee": "New Employee",
+    "new_leave": "New Leave",
+    "export_excel": "Export Excel"
   },
   "landing": {
     "hero_title": "Manage Your Human Resources with Simplicity",
@@ -48,6 +51,7 @@
     "stats_satisfaction": "Satisfaction"
   },
   "features": {
+    "title": "Complete Features",
     "employees_title": "Employee Management",
     "employees_desc": "Complete database with customizable fields, org chart and documents",
     "leaves_title": "Leaves & Absences",
@@ -62,6 +66,10 @@
     "analytics_desc": "Customizable dashboards, HR KPIs, Excel/PDF exports",
     "copilot_title": "AI Copilot",
     "copilot_desc": "Intelligent assistant to automate your daily HR tasks",
+    "security_title": "Security & Compliance",
+    "security_desc": "Data encryption, GDPR compliance, automatic backups",
+    "multilang_title": "Multilingual",
+    "multilang_desc": "Interface in French, Arabic and English with RTL support",
     "integrations_title": "Integrations",
     "integrations_desc": "Connect Excel, Sage and your favorite tools"
   },

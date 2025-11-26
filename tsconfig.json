@@ -1,6 +1,10 @@
 {
   "compilerOptions": {
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -18,15 +22,40 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/*"],
-      "@/components/*": ["./src/components/*"],
-      "@/lib/*": ["./src/lib/*"],
-      "@/hooks/*": ["./src/hooks/*"],
-      "@/styles/*": ["./src/styles/*"],
-      "@/types/*": ["./src/types/*"],
-      "@/config/*": ["./src/config/*"]
-    }
+      "@/*": [
+        "./src/*"
+      ],
+      "@/components/*": [
+        "./src/components/*"
+      ],
+      "@/lib/*": [
+        "./src/lib/*"
+      ],
+      "@/hooks/*": [
+        "./src/hooks/*"
+      ],
+      "@/styles/*": [
+        "./src/styles/*"
+      ],
+      "@/types/*": [
+        "./src/types/*"
+      ],
+      "@/config/*": [
+        "./src/config/*"
+      ]
+    },
+    "target": "ES2017"
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules", "server"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "server",
+    "playwright.config.ts",
+    "tests/**/*"
+  ]
 }

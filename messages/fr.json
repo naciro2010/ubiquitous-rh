@@ -32,7 +32,10 @@
     "performance": "Performance",
     "documents": "Documents",
     "settings": "Paramètres",
-    "logout": "Déconnexion"
+    "logout": "Déconnexion",
+    "new_employee": "Nouvel Employé",
+    "new_leave": "Nouveau Congé",
+    "export_excel": "Exporter Excel"
   },
   "landing": {
     "hero_title": "Gérez vos Ressources Humaines avec Simplicité",
