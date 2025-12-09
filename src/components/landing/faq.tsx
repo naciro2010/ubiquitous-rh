@@ -13,17 +13,17 @@ const faqs = [
   {
     question: 'Est-ce que RH Manager est conforme au Code du Travail marocain ?',
     answer:
-      'Oui, RH Manager est entièrement conforme au Code du Travail marocain. Le calcul des congés, de la CNSS (4.48%), de l\'IR et des bulletins de paie respecte la législation en vigueur.',
+      'Oui, RH Manager est entièrement conforme au Code du Travail marocain. Le calcul des congés, de la CNSS (4.48%), de l&apos;IR et des bulletins de paie respecte la législation en vigueur.',
   },
   {
     question: 'Puis-je importer mes données depuis Excel ?',
     answer:
-      'Absolument. RH Manager permet d\'importer vos données employés, congés et présences depuis des fichiers Excel (.xlsx). Nous fournissons des modèles prêts à l\'emploi.',
+      'Absolument. RH Manager permet d&apos;importer vos données employés, congés et présences depuis des fichiers Excel (.xlsx). Nous fournissons des modèles prêts à l&apos;emploi.',
   },
   {
-    question: 'Comment fonctionne l\'intégration avec Sage ?',
+    question: 'Comment fonctionne l&apos;intégration avec Sage ?',
     answer:
-      'L\'export vers Sage se fait en un clic. Vos données de paie sont formatées automatiquement pour être importées directement dans Sage Comptabilité.',
+      'L&apos;export vers Sage se fait en un clic. Vos données de paie sont formatées automatiquement pour être importées directement dans Sage Comptabilité.',
   },
   {
     question: 'Mes données sont-elles sécurisées ?',
@@ -33,10 +33,10 @@ const faqs = [
   {
     question: 'Puis-je personnaliser les champs et formulaires ?',
     answer:
-      'Oui, RH Manager offre un système de champs personnalisés et un Form Builder pour adapter l\'outil à vos processus RH spécifiques.',
+      'Oui, RH Manager offre un système de champs personnalisés et un Form Builder pour adapter l&apos;outil à vos processus RH spécifiques.',
   },
   {
-    question: 'L\'IA Copilot fonctionne en arabe ?',
+    question: 'L&apos;IA Copilot fonctionne en arabe ?',
     answer:
       'Oui, notre assistant IA est multilingue (français, arabe, anglais) et comprend le contexte RH marocain.',
   },
